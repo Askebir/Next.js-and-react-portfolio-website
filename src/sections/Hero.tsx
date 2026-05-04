@@ -4,7 +4,7 @@ import ArrowDown from "@/assets/icons/arrow-down.svg";
 
 export const HeroSection = () => {
   return (
-    <div className="py-24">
+    <div className="py-24 md:py-lg lg:py-28 ">
       <div className="container">
         <div className="flex flex-col  items-center  ">
           <Image
@@ -19,24 +19,26 @@ export const HeroSection = () => {
             </div>
           </div>
         </div>
-        <h1 className="font-serif text-3xl text-center mt-9  tracking-wider ">
-          Building Exceptional User Experiences
-        </h1>
-        <p className="mt-4 text-center text-white/60 ">
-          Ispecialize in transforimg designs into functional, high-performing
-          Web applcation. Let's discuss your next project.{" "}
-        </p>
-        <div className="flex flex-col items-center mt-10 gap-4  ">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-            <span className="font-semibold">Explore My Works</span>
+        <div className="max-w-lg mx-auto">
+          <h1 className="font-serif text-3xl md:text-5xl font-bold text-center mt-9  tracking-wider ">
+            Building Exceptional User Experiences
+          </h1>
+          <p className="mt-4 text-center text-white/60 md:text-lg ">
+            Ispecialize in transforimg designs into functional, high-performing
+            Web applcation. Let's discuss your next project.{" "}
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row justify-center   items-center mt-32    gap-4 md:gap-8 md:py-3  ">
+          <button className="inline-flex  items-center gap-2  border border-white/15 px-6 md:px-10 md:py-4 h-12  rounded-xl">
+            <span className="font-semibold  md:text-xl ">Explore My Works</span>
             <span className="w-4 h-4">
               {" "}
               <ArrowDown />
             </span>
           </button>
-          <button className="inline-flex items-center gap-6 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl ">
+          <button className="inline-flex items-center gap-6 border  border-white bg-white text-gray-900 h-12  md:px-10 md:py-4  px-6 rounded-xl ">
             <span> 👋</span>
-            <span className="font-semibold ">Let's Conect</span>
+            <span className="font-semibold  md:text-xl ">Let's Conect</span>
           </button>
         </div>
       </div>
