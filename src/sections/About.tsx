@@ -43,79 +43,94 @@ const toolboxItems = [
 
 const hobbies = [
   {
-    title: "JavaScript",
-    emoji: JavascriptIcon,
+    title: "Painting",
+    emoji: "🎨",
   },
   {
-    title: "HTML5",
-    iconType: HTMLIcon,
+    title: "Photography",
+    emoji: "📸",
   },
   {
-    title: "CSS3",
-    iconType: CssIcon,
+    title: "Gaming",
+    emoji: "🎮 ",
   },
   {
-    title: "React",
-    iconType: ReactIcon,
+    title: "HIking",
+    emoji: "🥾 ",
   },
   {
-    title: "Chrome",
-    iconType: ChromeIcon,
+    title: "Music",
+    emoji: "🎵",
   },
   {
-    title: "Github",
-    iconType: GithubIcon,
+    title: "Fitness",
+    emoji: "💪",
   },
 ];
 
 export const AboutSection = () => {
   return (
-    <div className="pb-96">
-      <SectionHeader
-        eyebrow="about Me"
-        title="A Glimpse Into My World"
-        description="Learn more about who I am, What I do and what inspires me"
-      />
+    <div className="pb-16">
+      <div className="container">
+        <SectionHeader
+          eyebrow="about Me"
+          title="A Glimpse Into My World"
+          description="Learn more about who I am, What I do and what inspires me"
+        />
 
-      <div>
-        <Card>
-          <div>
-            <StarIcon />
-            <h3>My Reads</h3>
-            <p>Explore the books shaping my perspectives.</p>
-          </div>
-          <Image src={bookImage} alt="Book cover" />
-        </Card>
-        <Card>
-          <div>
-            <StarIcon />
-            <h3>My Toolbox</h3>
-            <p>
-              Explore the technologies and tools I use to craft exceptional
-              digital experiences .
-            </p>
-          </div>
-          <div>
-            {toolboxItems.map((item) => (
-              <div key={item.title}>
-                <TechIcon component={item.iconType} />
-                <span>{item.title}</span>
+        <div>
+          <Card>
+            <div>
+              <div className="inline-flex  items-center gap-2 ">
+                <StarIcon className="size-9 text-emerald-300" />
+
+                <h3 className="font-serif text-3xl ">My Reads</h3>
               </div>
-            ))}
-          </div>
-        </Card>
-        <Card>
-          <div>
-            <StarIcon />
-            <h3>Beyond the Code</h3>
+              <p className="text-sm text-white/60">
+                Explore the books shaping my perspectives.
+              </p>
+            </div>
+            <Image src={bookImage} alt="Book cover" />
+          </Card>
+          <Card>
+            <div>
+              <StarIcon />
+              <h3>My Toolbox</h3>
+              <p>
+                Explore the technologies and tools I use to craft exceptional
+                digital experiences .
+              </p>
+            </div>
+            <div>
+              {toolboxItems.map((item) => (
+                <div key={item.title}>
+                  <TechIcon component={item.iconType} />
+                  <span>{item.title}</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+          <Card>
+            <div>
+              <StarIcon />
+              <h3>Beyond the Code</h3>
 
-            <p>Explore my interests and hobbies beyond the digital realm</p>
-          </div>
-        </Card>
-        <Card>
-          <Image src={mapImage} alt="map" />
-          <Image src={smileMemoji} alt="sime memoji" />
-        </Card>
+              <p>Explore my interests and hobbies beyond the digital realm</p>
+            </div>
+            <div>
+              {hobbies.map((hobby) => (
+                <div key={hobby.title}>
+                  <span>{hobby.title}</span>
+                  <span>{hobby.emoji}</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+          <Card>
+            <Image src={mapImage} alt="map" />
+            <Image src={smileMemoji} alt="sime memoji" />
+          </Card>
+        </div>
       </div>
     </div>
   );
