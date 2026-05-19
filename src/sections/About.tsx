@@ -13,6 +13,7 @@ import GithubIcon from "@/assets/icons/github.svg";
 import { TechIcon } from "@/components/Techlcon";
 import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
+import { CardHeader } from "@/components/CardHeader";
 
 const toolboxItems = [
   {
@@ -79,18 +80,15 @@ export const AboutSection = () => {
         />
 
         <div>
-          <Card>
-            <div>
-              <div className="inline-flex  items-center gap-2 ">
-                <StarIcon className="size-9 text-emerald-300" />
+          <Card className="h-[320px]">
+            <CardHeader
+              title="My Reads"
+              description="       Explore the books shaping my perspectives."
+            />
 
-                <h3 className="font-serif text-3xl ">My Reads</h3>
-              </div>
-              <p className="text-sm text-white/60">
-                Explore the books shaping my perspectives.
-              </p>
+            <div className="w-40  mx-auto mt-8 ">
+              <Image src={bookImage} alt="Book cover" />
             </div>
-            <Image src={bookImage} alt="Book cover" />
           </Card>
           <Card>
             <div>
