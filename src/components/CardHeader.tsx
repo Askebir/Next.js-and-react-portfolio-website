@@ -16,7 +16,9 @@ export const CardHeader = ({
 
         <h3 className="font-serif text-3xl ">{title}</h3>
       </div>
-      <p className="text-sm text-white/60 mt-2 ">{description}</p>
+      <p className="text-sm lg:text-base max-w-sx text-white/60 mt-2 ">
+        {description}
+      </p>
     </div>
   );
 };
